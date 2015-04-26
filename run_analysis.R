@@ -4,14 +4,14 @@ library(qdap)
 library(reshape2)
 
 # Read in the data from the .txt files
-test.data<- read.table("./test/X_test.txt")
-train.data<- read.table("./train/X_train.txt")
-test.activities <- read.table("./test/y_test.txt")
-train.activities <- read.table("./train/y_train.txt")
-test.subjects<-read.table("./test/subject_test.txt")
-train.subjects<-read.table("./train/subject_train.txt")
-activities<-read.table("activity_labels.txt")
-features<-read.table("features.txt")
+test.data<- read.table("./data/test/X_test.txt")
+train.data<- read.table("./data/train/X_train.txt")
+test.activities <- read.table("./data/test/y_test.txt")
+train.activities <- read.table("./data/train/y_train.txt")
+test.subjects<-read.table("./data/test/subject_test.txt")
+train.subjects<-read.table("./data/train/subject_train.txt")
+activities<-read.table("./data/activity_labels.txt")
+features<-read.table("./data/features.txt")
 
 # Combine the two data sets
 combined.data<-rbind(test.data,train.data)

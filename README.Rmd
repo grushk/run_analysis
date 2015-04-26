@@ -11,7 +11,7 @@ Included files:
 1. Download the zip file and extract it into a folder titled 'data' in the same working directory as run_analysis.R  
     + Link: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip   
 2. Run the R file using source() in rstudio.  
-3. The script will output a file called 'run_analysis.txt' that can be opened in rstudio using read.table("run_analysis.txt",header=TRUE)  
+3. The script will output a file called 'run_analysis.txt' that can be opened in rstudio using '''read.table("run_analysis.txt",header=TRUE)'''  
   
 ====================  
 

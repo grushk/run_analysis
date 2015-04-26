@@ -6,71 +6,41 @@
 - I interpreted the assignment to be asking for the mean() and std() measurement of each of the features. Since there are 33 total features this results in a total of 66 features kept in the final data.  
 - I have chosen to arrange the data in long format with 4 columns: Subject, Activity, Variable, and Mean. There are 30 subjects, 6 activities, 66 variables, and 1 mean per row for a total of 11,880 rows and 4 columns. Below is a description of each of the features.  
   
-Feature                   | Rows | Description
---------------------------|------|------------
-tBodyAcc.mean.X           |
-tBodyAcc.mean.Y           |
-tBodyAcc.mean.Z           |
-tBodyAcc.std.X            |
-tBodyAcc.std.Y            |
-tBodyAcc.std.Z            |
-tGravityAcc.mean.X        |
-tGravityAcc.mean.Y        |
-tGravityAcc.mean.Z        |
-tGravityAcc.std.X         |
-tGravityAcc.std.Y         |
-tGravityAcc.std.Z         |
-tBodyAccJerk.mean.X       |
-tBodyAccJerk.mean.Y       |
-tBodyAccJerk.mean.Z       |
-tBodyAccJerk.std.X        |
-tBodyAccJerk.std.Y        |
-tBodyAccJerk.std.Z        |
-tBodyGyro.mean.X          |
-tBodyGyro.mean.Y          |
-tBodyGyro.mean.Z          |
-tBodyGyro.std.X           |
-tBodyGyro.std.Y           |
-tBodyGyro.std.Z           |
-tBodyGyroJerk.mean.X      |
-tBodyGyroJerk.mean.Y      | 
-tBodyGyroJerk.mean.Z      |
-tBodyGyroJerk.std.X       |
-tBodyGyroJerk.std.Y       | 
-tBodyGyroJerk.std.Z       |
-tBodyAccMag.mean          | 
-tBodyAccMag.std           | 
-tGravityAccMag.mean       |
-tGravityAccMag.std        |
-tBodyAccJerkMag.mean      |
-tBodyAccJerkMag.std       |
-tBodyGyroMag.mean         |
-tBodyGyroMag.std          | 
-tBodyGyroJerkMag.mean     |   
-tBodyGyroJerkMag.std      |
-fBodyAcc.mean.X           |   
-fBodyAcc.mean.Y           |  
-fBodyAcc.mean.Z           |   
-fBodyAcc.std.X            |   
-fBodyAcc.std.Y            |  
-fBodyAcc.std.Z            |   
-fBodyAccJerk.mean.X       |   
-fBodyAccJerk.mean.Y       |  
-fBodyAccJerk.mean.Z       |    
-fBodyAccJerk.std.X        |
-fBodyAccJerk.std.Y        |
-fBodyAccJerk.std.Z        | 
-fBodyGyro.mean.X          |
-fBodyGyro.mean.Y          |
-fBodyGyro.mean.Z          |
-fBodyGyro.std.X           |
-fBodyGyro.std.Y           |
-fBodyGyro.std.Z           |
-fBodyAccMag.mean          | 
-fBodyAccMag.std           |
-fBodyBodyAccJerkMag.mean  | 
-fBodyBodyAccJerkMag.std   |
-fBodyBodyGyroMag.mean     |
-fBodyBodyGyroMag.std      |
-fBodyBodyGyroJerkMag.mean |
-fBodyBodyGyroJerkMag.std  |
+For each feature there is one row for each dimension X,Y,Z if applicable as well as mean and std. Dimensions X,Y,Z are combined below.
+  
+Feature                   | Description
+--------------------------|------------
+tBodyAcc.mean.XYZ         | Mean of body acceleration in the time domain
+tBodyAcc.std.XYZ          | Standard deviation of body acceleration
+tGravityAcc.mean.XYZ      | Mean of gravity acceleration
+tGravityAcc.std.XYZ       | Standard deviation of gravity acceleration
+tBodyAccJerk.mean.XYZ     | Mean of body acceleration jerk
+tBodyAccJerk.std.XYZ      | Standard deviation of body acceleration jerk
+tBodyGyro.mean.XYZ        | Mean of body gyroscope 
+tBodyGyro.std.XYZ         | Standard deviation of body gyroscope
+tBodyGyroJerk.mean.XYZ    | Mean of body gyroscope jerk
+tBodyGyroJerk.std.XYZ     | Standard deviation of body gyroscope jerk
+tBodyAccMag.mean          | Mean of body acceleration body acceleration mag
+tBodyAccMag.std           | Standard deviation of body acceleration mag
+tGravityAccMag.mean       | Mean of gravity acceleration mag
+tGravityAccMag.std        | Standard deviation of gravity acceleration mag
+tBodyAccJerkMag.mean      | Mean of body acceleration jerk mag
+tBodyAccJerkMag.std       | Standard deviation of body acceleration jerk mag
+tBodyGyroMag.mean         | Mean of body gyro mag
+tBodyGyroMag.std          | Standard deviation of body gyro mag 
+tBodyGyroJerkMag.mean     | Mean of body gyroscopre jerk mag
+tBodyGyroJerkMag.std      | Standard deviation of body gyroscope jerk mag
+fBodyAcc.mean.XYZ         | Mean of body acceleration
+fBodyAcc.std.XYZ          | Standard deviation of body acceleration
+fBodyAccJerk.mean.XYZ     | Mean of body acceleration jerk
+fBodyAccJerk.std.XYZ      | Standard deviation of body acceleration jerk
+fBodyGyro.mean.XYZ        | Mean of body body gyroscope
+fBodyGyro.std.XYZ         | Standard deviation of body gyroscope
+fBodyAccMag.mean          | Mean of body acceleration mag
+fBodyAccMag.std           | Standard deviation of body acceleration mag
+fBodyBodyAccJerkMag.mean  | Mean of body body acceleration jerk mag
+fBodyBodyAccJerkMag.std   | Standard deviation of body body acceleration jerk mag
+fBodyBodyGyroMag.mean     | Mean of body body gyro mag
+fBodyBodyGyroMag.std      | standard deviation of body body gyro mag
+fBodyBodyGyroJerkMag.mean | Mean of body body acceleration jerk mag
+fBodyBodyGyroJerkMag.std  | Standard deviation of body body acceleration jerk mag
