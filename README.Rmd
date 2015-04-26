@@ -1,0 +1,23 @@
+# run_analysis Course Project
+## For Getting and Cleaning Data Course Project
+
+Included files:  
+- 'run_analysis.R'  
+- 'README.md'  
+
+====================  
+
+##Steps to run run_anlysis.R  
+1. Download the zip file and extract it into a folder titled 'data' in the same working directory as run_analysis.R  
+    + Link: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip   
+2. Run the R file using source() in rstudio.  
+3. The script will output a file called 'run_analysis.txt' that can be opened in rstudio using read.table("run_analysis.txt",header=TRUE)  
+  
+====================  
+
+## Description of approach
+This script reads in the data tables and binds the test and train data together. The first transformation is to add the feature names as column names using make.names to force uniqueness. The data is narrowed to mean() and std() measurements using the features table, as the text there has not been altered in any way. Searching for 'mean()' and 'std()' removes features with mean or std in the name and measurements that are not pure means and stds.  
+  
+The data is then cleaned up by removing extra periods from column names, converting the activity values to descriptive names, and combining the subject and activity columns to the data table.  
+  
+The data is finally reshaped using 'melt' with Subject and Activity as ids and all other columns as variables. That data is then summarized using mean to create a long table with columns Subject, Activity, variable, and mean. Each row is one subject, one activity, one feature, and the mean value. 
